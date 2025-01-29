@@ -1555,6 +1555,7 @@ input, select, textarea {
 
 	table {
 		width: 100%;
+		border: 2px solid black;
 	}
 
 		table tr {

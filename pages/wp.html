@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SemantyFish - Advancing Visibility, Interoperability and Exploitability of FishBase</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="icon" type="image/png" href="../favicon.ico">
+	</head>
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="../index.html">SemantyFish</a></h1>
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="../index.html">Home</a></li>
+									<li>
+										<a href="./about.html">About</a>
+										<ul>
+											<li><a href="#">Work packages</a></li>
+											<li><a href="../partners.html">Partners</a></li>
+											<li><a href="../team.html">SemantyFish Team</a></li>
+											<li><a href="../fishbase.html">About FishBase</a></li>
+										</ul>
+									</li>
+									<li><a href="../api.html">SemantyFish API</a></li>
+									<li><a href="../news.html">News and Announcements</a></li>
+									<li><a href="../contact.html">Contact</a></li>
+								</ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+								<h2>Work Packages</h2>
+							</div>
+							
+							<div class="col-12">
+								<p>The project implementation is organized into four distinct work packages; 
+									<b>WP1</b> will carry out the FishBase resources analysis, as well as the design and implementation of the semantic knowledge base (KB) 
+									of FishBase. <b>WP2</b> elaborates on the development of the FishBase KB API that will expose the contents of the KB. 
+									<b>WP3</b> summarizes the exploitation and dissemination activities ensuring that the results of the projects are well 
+									communicated and disseminated. <b>WP4</b> will carry out the activities related to the contribution of the project in related Research 
+									Infrastructures and EOSC. 
+								</p>
+							</div>
+
+							<div class="col-12">
+								<table>
+									<tr>
+										<td><b>WP1</b></td>
+										<td><b>FishBase Knowledge Base (KB)</b></td>
+										<td><b>Duration: [M1-M9]</b></td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<li><strong>T1.1 Definition of Ontology [M1-M2]</strong></li>
+											This task will implement the conceptual model that will be used as the schema of the FishBase Knowledge Base (KB). 
+											Instead of designing and creating an ontology from scratch, this task will reuse related ontologies 
+											(i.e. MarineTLO, Fisheries &amp; Aquaculture Ontology) and extend them accordingly. 
+											FishBase data encoders will facilitate in properly identifying difficult definitions, and for possible important corrections of 
+											the database if needed. <br>
+											<li><strong>T1.2 Definition of Schema Mappings [M3-M6]</strong></li>
+											The schema mapping resources that are needed for transforming data described with respect to the original relational schema of 
+											FishBase to ontological instances using the adopted ontology will be defined. The schema mappings will be defined using 
+											state-of-the-art technologies, they will be described in a technology-neutral manner and will be used for the periodic 
+											reconstruction of FishBase knowledge base. <br>
+											<li><strong>T1.3 Construction of FishBase Knowledge Base [M3-M9]</strong></li>
+											An automatic workflow resulting in the construction of the knowledge base will be implemented. The workflow will use as input a 
+											complete dump of the relational database of FishBase, and the schema mappings defined above, it will construct the ontological
+											instances and add them into an appropriate RDF database (e.g. an RDF triplestore).
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<strong><span style="text-decoration: underline;">Deliverables </span></strong>
+											<li><strong>D1.1 Ontology and Schema Mappings [M6]</strong></li>
+											<li><strong>D1.2 FishBase RDF resources [M9]</strong></li>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div class="col-12">
+								<table>
+									<tr>
+										<td><b>WP2</b></td>
+										<td><b>FishBase KB API</b></td>
+										<td><b>Duration: [M5-M18]</b></td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<li><strong>T2.1 API Design and Specification [M5-M9]</strong></li>
+											The API should provide access to all the resources of FishBase KB.
+											This phase includes the definition of the primary endpoints and methods that the API will encompass. 
+											They will serve as the backbone of the API, facilitating seamless interaction with the vast array of data and information in the KB.
+											Additionally, a detailed specification will be drafted using OpenAPI specification.<br>
+											<li><strong>T2.2 Implementation of the API [M10-M18]</strong></li>
+											The API will be implemented using GraphQL providing developers great flexibility and control over data fetching and manipulation. 
+											By adopting GraphQL, developers will enjoy a sophisticated framework that allows for precise specification of data requirements, 
+											enabling them to request only the specific data elements needed for their applications. This approach contrasts with traditional 
+											REST APIs, providing a more efficient and tailored data retrieval process. Activities will begin with the design and creation of a 
+											GraphQL schema defining the types of data available and the relationships between them. 
+											Then the API will be equipped with appropriate resolvers, acting as the middleware responsible for fetching the requested data. 
+											Finally, a set of queries will be implemented to enable developers to interact seamlessly with the API. <br>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<strong><span style="text-decoration: underline;">Deliverables </span></strong>
+											<li><strong>D2.1 FishBase KB API [M18]</strong></li>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div class="col-12">
+								<table>
+									<tr>
+										<td><b>WP3</b></td>
+										<td><b>Exploitation and Dissemination</b></td>
+										<td><b>Duration: [M7-M24]</b></td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<li><strong>T3.1 Dissemination Activities [M7-M24]</strong></li>
+											This task will ensure that the project results are communicated clearly to a wide scientific and research audience. 
+											Dissemination activities will include (but are not related to) sharing project results in partner’s networks,
+											participating in related workshops and conferences in the domain, as well as organizing a hackathon prompting
+											developers to use FishBase API, targeting first heavy users known to be interested in such API. 
+											Data encoders will participate to training activities to test and validate the API as well.<br>
+											<li><strong>T3.2 Exploitation and Sustainability [M13-M24]</strong></li>
+											This task will set the seal on project outcomes, making sure they are effectively utilized and sustained also beyond the project duration. 
+											In parallel with the activities of task T3.1, this task will identify the potential stakeholders and end-users and will seek to 
+											establish partnerships to support the adoption of project outcomes. <br>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<strong><span style="text-decoration: underline;">Deliverables </span></strong>
+											<li><strong>D3.1 Final Project Summary and Presentation [M24]</strong></li>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div class="col-12">
+								<table>
+									<tr>
+										<td><b>WP4</b></td>
+										<td><b>Synergies with RIs and EOSC</b></td>
+										<td><b>Duration: [M13-M24]</b></td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<li><strong>T4.1 Synergies with RIs and Groups [M13-M24]</strong></li>
+											This task aims to establish synergies with existing Research Infrastructures (RIs) 
+											(e.g. LifeWatch ERIC, WoRMS, Catalogue of Life) and other Groups in the European Ecosystem (e.g. the EU Horizon project VeriFish), 
+											strengthen the collaboration with them, promote the usability of FishBase KB and API, 
+											and support their community of users to access FishBase. 
+											A detailed list of contacting related RIs and the actual activities will be recorded and provided as a final report.<br>
+											<li><strong>T4.2 EOSC and Sustainability [M19-M24]</strong></li>
+											This task aims to promote the project results and strengthen its exploitability by registering them to the EOSC portal. 
+											Apart from making it available to a wide interdisciplinary audience, it will increase the utility of the results through their 
+											potential linking with compatible resources from the EOSC portal. <br>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<strong><span style="text-decoration: underline;">Deliverables </span></strong>
+											<li><strong>D4.1 Report on Synergies with RIs [M22]</strong></li>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; SemantyFish. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
