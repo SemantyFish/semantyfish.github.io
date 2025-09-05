@@ -1,21 +1,20 @@
-<!DOCTYPE HTML>
-<!--
-	Verti by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>SemantyFish - Advancing Visibility, Interoperability and Exploitability of FishBase</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SemantyFish - Advancing Visibility, Interoperability and Exploitability of FishBase</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<link rel="icon" type="image/png" href="../favicon.ico">
-	</head>
-	<body class="is-preload homepage">
-		<div id="page-wrapper">
+  <link rel="stylesheet" href="../assets/swagger/swagger-ui.css" />
 
-			<!-- Header -->
+</head>
+<body>
+  
+  <!-- Content -->
+  <main>
+
+	<!-- Header -->
 				<div id="header-wrapper">
 					<header id="header" class="container">
 
@@ -46,35 +45,44 @@
 					</header>
 				</div>
 
-			<!-- Main -->
-			<div id="main-wrapper">
-				<div class="container">
-					<div class="row gtr-200">
-						<div class="col-12">
-							<h3>SemantyFish API</h3>
-						</div>
-						
-						<div class="col-12">
-							<p>
-								To facilitate the discovery and access of the the knowledge base that will be developed, 
-								we will implement an Application Programming Interface (API). 
-								The API will enhance the accessibility and usability of the structured data within the knowledge base. 
-								Through the API, developers, applications and other services will seamlessly interact with the RDF data. 
-								It will consist of several methods, semantically grouped into different categories facilitating their use.
-								Compared to the existing status that offers an API only for fish names,
-								the new API will provide access to all FishBase resources. Moreover, it will support exporting 
-								FishBase contents with respect to different formats and standards. 
-								This will allow users to collect FishBase data in their preferred format, 
-								enabling easy integration with existing systems, analysis tools and services. 
-								Just indicatively, the API will support multiple formats such as JSON, JSON-LD, XML, RDF-XML, Turtle, 
-								DwC-A, and others.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+    <section id="swagger-section">
+		
+      <div id="swagger-ui"></div>
+    </section>
+  </main>
 
-			<!-- Footer -->
+  <!-- Swagger UI scripts -->
+  <script src="../assets/swagger/swagger-ui-bundle.js"></script>
+  <script src="../assets/swagger/swagger-ui-standalone-preset.js"></script>
+  <script>
+    // Initialize Swagger UI
+    const ui = SwaggerUIBundle({
+      url: "https://api.swaggerhub.com/apis/YANNISMARKETAKIS_1/semantyfish-api/1.0.0/swagger.json", // replace with your SwaggerHub URL
+      dom_id: "#swagger-ui",
+      presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+      layout: "BaseLayout"
+    });
+
+    // Navigation behavior
+    const homeLink = document.getElementById("home-link");
+    const swaggerLink = document.getElementById("swagger-link");
+    const homeSection = document.getElementById("home-section");
+    const swaggerSection = document.getElementById("swagger-section");
+
+    homeLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      homeSection.style.display = "block";
+      swaggerSection.style.display = "none";
+    });
+
+    swaggerLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      homeSection.style.display = "none";
+      swaggerSection.style.display = "block";
+    });
+  </script>
+
+<!-- Footer -->
 				<div id="footer-wrapper">
 					<footer id="footer" class="container">
 						<div class="row">
@@ -89,16 +97,5 @@
 					</footer>
 				</div>
 
-			</div>
-
-		<!-- Scripts -->
-
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.dropotron.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
