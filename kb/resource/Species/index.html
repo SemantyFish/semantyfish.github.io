@@ -1,0 +1,7 @@
+<script>
+  const path = window.location.pathname; 
+  // e.g. "/kb/resource/Species/1"
+  const id = path.split("/").pop(); 
+  window.location.href = "https://demos.isl.ics.forth.gr/semantyfish-api/resources/species/" + id;
+ 
+</script>
