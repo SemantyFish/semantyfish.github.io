@@ -9,12 +9,10 @@
   <link rel="stylesheet" href="../assets/swagger/swagger-ui.css" />
 
 </head>
-<body>
-  
-  <!-- Content -->
-  <main>
+<body class="is-preload homepage">
+		<div id="page-wrapper">
 
-	<!-- Header -->
+			<!-- Header -->
 				<div id="header-wrapper">
 					<header id="header" class="container">
 
@@ -45,44 +43,49 @@
 					</header>
 				</div>
 
-    <section id="swagger-section">
-		
-      <div id="swagger-ui"></div>
-    </section>
-  </main>
+			<!-- Main -->
+			<div id="main-wrapper">
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-12">
+							<h2>SemantyFish API</h2>
+						</div>
+						
+						<div class="row gtr-200">
+							<div class="col-7 col-12-medium">
 
-  <!-- Swagger UI scripts -->
-  <script src="../assets/swagger/swagger-ui-bundle.js"></script>
-  <script src="../assets/swagger/swagger-ui-standalone-preset.js"></script>
-  <script>
-    // Initialize Swagger UI
-    const ui = SwaggerUIBundle({
-      url: "https://api.swaggerhub.com/apis/YANNISMARKETAKIS_1/semantyfish-api/1.0.0/swagger.json", // replace with your SwaggerHub URL
-      dom_id: "#swagger-ui",
-      presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
-      layout: "BaseLayout"
-    });
+								<!-- Content -->
+									<div id="sidebar">
+										<section class="last">
+											The SemantyFish API provides programmatic access to the SemantyFish Knowledge Base, enabling seamless integration of marine species data into applications, websites, and research tools.
+											Through the API, users can:
+											<ul>
+												<li>Search the knowledge base efficiently</li>
+												<li>Retrieve data in a structured and machine-readable format</li>
+												<li>Access detailed information about marine species and their related resources</li>
+											</ul>
+											This makes it easier for developers, researchers, and practitioners to explore, reuse, and connect SemantyFish data in an automated and scalable way.
+											<br>
+											You can access SemantyFish API from <a href="https://demos.isl.ics.forth.gr/semantyfish-api/" target="_blank">https://demos.isl.ics.forth.gr/semantyfish-api/</a>
+										</section>
+									</div>
 
-    // Navigation behavior
-    const homeLink = document.getElementById("home-link");
-    const swaggerLink = document.getElementById("swagger-link");
-    const homeSection = document.getElementById("home-section");
-    const swaggerSection = document.getElementById("swagger-section");
+							</div>
+							<div class="col-5 col-12-medium">
+								<!-- Screenshot -->
+									<div id="content">
+											<a href="https://demos.isl.ics.forth.gr/semantyfish-api/" target="_blank">
+												<img src="../images/api/semantyfish-api-Screenshot.png" width="100%"/>
+											</a>
+										
+									</div>
+							</div>
+					</div>
+					</div>
+				</div>
+			</div>
 
-    homeLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      homeSection.style.display = "block";
-      swaggerSection.style.display = "none";
-    });
-
-    swaggerLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      homeSection.style.display = "none";
-      swaggerSection.style.display = "block";
-    });
-  </script>
-
-<!-- Footer -->
+			<!-- Footer -->
 				<div id="footer-wrapper">
 					<footer id="footer" class="container">
 						<div class="row">
@@ -97,5 +100,16 @@
 					</footer>
 				</div>
 
-</body>
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
 </html>
